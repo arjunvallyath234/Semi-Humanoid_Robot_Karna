@@ -148,3 +148,18 @@ For this project, human–robot interaction (HRI) was achieved through two prima
    * R-shape Right
    * Line/Stroke Forward or Backward
 
+### Power Supply and Distribution System
+
+The robot’s power architecture is designed to provide stable voltage levels for sensitive electronics while meeting the high current demands of the motors and pumps. To achieve this without a bulky Switch Mode Power Supply (SMPS), the system utilizes two dedicated battery banks (10V and 8V) that feed into three independent internal buses.
+
+1. Bus Architecture
+   The power distribution is segregated into three functional buses to minimize electrical noise and ensure system reliability:
+   * Bus 1 (8V) – Control & Logic: This bus provides regulated power to the primary controllers (Arduino/ESP32), sensors (GPS/Ultrasound), and relays.
+   * Bus 2 (12V) – High-Power Actuators: Dedicated to driving the locomotion and auxiliary systems, including the gear motors, air pump, motor drivers, and high-intensity LED lighting.
+   * Bus 3 (12V) – Servo Dynamics: This bus is exclusively reserved for the servo motors. Segregating the servos onto their own bus prevents voltage drops during rapid arm movements from affecting the logic controllers or the locomotion motors.
+
+2. Battery Configuration
+   The system uses a combination of battery sources to maintain these bus levels:
+   * Primary Bank: One 10V battery bank.
+   * Secondary Bank: One 8V battery bank.
+   These banks are connected to the internal buses via voltage regulators (such as LM7805 or LM7812) or buck/boost converters to step the voltage to the required 8V and 12V outputs.
