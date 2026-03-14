@@ -112,6 +112,23 @@ The metal detector employs an NE555 timer-based oscillator to detect metallic pr
 
 ![Karna metal_detector](project_images/metal_detector.png)
 
+### Global Positioning System (GPS) Integration
+
+The robot incorporates a Global Positioning System (GPS) to provide real-time location tracking and spatial awareness. This system is powered by an ESP32 NodeMCU, utilizing its integrated Wi-Fi capabilities to bridge the gap between hardware sensors and mobile monitoring interfaces.
+
+1. Connectivity and Network Protocol
+   The ESP32 manages the data transmission through a multi-step connection process:
+   * Network Initialization: The robot establishes a connection to a dedicated hotspot device to ensure stable internet access.
+   * Status Monitoring: When the board is connected directly to a PC, the serial monitor provides diagnostic feedback, confirming whether the robot has successfully secured internet access.
+   * Server Communication: The system utilizes the BLYNK server as a backend to handle the data stream from the GPS module.
+
+2. Monitoring and Visualization
+   For the end-user, the spatial data is visualized through a specialized mobile interface:
+   * Application Interface: The operator uses the 'KARNA Monitoring App' to view the robot's status.
+   * Real-time Data Display: Once the BLYNK server connection is established, the application displays the robot's precise geographical position and relevant sensor readings directly on the mobile screen.
+
+     ![Karna GPS](project_images/karna_GPS.png)
+
 ### Human–Robot Interaction: Voice and Gesture Control
 
 For this project, human–robot interaction (HRI) was achieved through two primary modalities: vocal commands and physical gestures, facilitated by the AMR_Voice and AMR:Gestures Android applications. These interfaces allow for intuitive, real-time control of the robot’s mobility and specialized hardware functions.
@@ -130,3 +147,4 @@ For this project, human–robot interaction (HRI) was achieved through two prima
    * L-shape Left
    * R-shape Right
    * Line/Stroke Forward or Backward
+
