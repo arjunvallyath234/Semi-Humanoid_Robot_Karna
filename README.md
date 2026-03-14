@@ -157,7 +157,8 @@ The robot’s power architecture is designed to provide stable voltage levels fo
    * Bus 1 (8V) – Control & Logic: This bus provides regulated power to the primary controllers (Arduino/ESP32), sensors (GPS/Ultrasound), and relays.
    * Bus 2 (12V) – High-Power Actuators: Dedicated to driving the locomotion and auxiliary systems, including the gear motors, air pump, motor drivers, and high-intensity LED lighting.
    * Bus 3 (12V) – Servo Dynamics: This bus is exclusively reserved for the servo motors. Segregating the servos onto their own bus prevents voltage drops during rapid arm movements from affecting the logic controllers or the locomotion motors.
-     
+     ![Karna bus](project_images/karna_bus1.png)
+
 
 2. Battery Configuration
    The system uses a combination of battery sources to maintain these bus levels:
