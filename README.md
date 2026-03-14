@@ -164,3 +164,8 @@ The robot’s power architecture is designed to provide stable voltage levels fo
    * Primary Bank: One 10V battery bank.
    * Secondary Bank: One 8V battery bank.
    These banks are connected to the internal buses via voltage regulators (such as LM7805 or LM7812) or buck/boost converters to step the voltage to the required 8V and 12V outputs.
+
+ ![Karna main_power](project_images/main_power.png)
+ ![Karna aux_power](project_images/aux_power.png)
+
+
