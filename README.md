@@ -37,10 +37,13 @@ We assign frames at each joint: the Shoulder ($Joint_1$), the Elbow ($Joint_2$),
 4. $\theta_1, \theta_2, \theta_3$: The joint angles.
    
 Position ($x, y$): The coordinates of the end-effector are the sum of the horizontal and vertical components of each link:
+
  $$x = L_1 \cos(\theta_1) + L_2 \cos(\theta_1 + \theta_2) + L_3 \cos(\theta_1 + \theta_2 + \theta_3)$$
+ 
  $$y = L_1 \sin(\theta_1) + L_2 \sin(\theta_1 + \theta_2) + L_3 \sin(\theta_1 + \theta_2 + \theta_3)$$
   
 Orientation ($\phi$):The total angle of the end-effector relative to the $x$-axis is simply the sum of the joint angles:
+
  $$\phi = \theta_1 + \theta_2 + \theta_3$$
 
 
@@ -50,6 +53,7 @@ Given a target end-effector position $(x, y)$ and a desired orientation $\phi$, 
 1. Wrist Position:
    
     $$x_2 = x - L_3 \cos(\phi)$$
+   
     $$y_2 = y - L_3 \sin(\phi)$$
 
 3. Elbow Angle ($\theta_2$):
