@@ -169,4 +169,14 @@ The robot’s power architecture is designed to provide stable voltage levels fo
  ![Karna main_power](project_images/main_power.png)
  ![Karna aux_power](project_images/aux_power.png)
 
-
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
